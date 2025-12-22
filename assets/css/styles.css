@@ -1,0 +1,32 @@
+.todo-list-div,
+.todo-input-div {
+  display: grid;
+  grid-template-columns: 300px 60px;
+  align-items: center;
+}
+
+.todo-input-div {
+  margin: 0 0 10px 0;
+}
+
+.todo-input,
+.todo {
+  font-family: "ibm plex mono", Arial, Helvetica, sans-serif;
+}
+
+.todo-add-btn,
+.todo-delete-btn {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  height: 30px;
+}
+
+.todo-input {
+  height: 26px;
+  width: 278px;
+  font-size: 18px;
+}
+
+.todo {
+  font-size: 22px;
+}
