@@ -65,3 +65,11 @@ document.querySelector('.js-todo-input')
   .addEventListener('keydown', () => {
     addToDoOnEnter();
   });
+
+document.querySelectorAll('.todo-container')
+ .forEach(todo => {
+  todo.addEventListener('click', () => {
+    todo.classList.add('todo-done');
+    console.log('clicked')
+  });
+ });
