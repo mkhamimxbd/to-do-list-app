@@ -10,7 +10,7 @@
   }
 
   .todo-list-div {
-    grid-template-columns: 334px;
+    grid-template-columns: 360px;
   }
 
   .todo-input {

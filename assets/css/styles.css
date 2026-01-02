@@ -58,9 +58,10 @@ main {
 .white-bg-for-pc {
   position: fixed;
   bottom: 0;
-  height: 86px;
+  height: 90px;
   width: 100vw;
   background-color: white;
+  box-shadow: white 0 -6px 10px;
   z-index: 100;
 }
 
