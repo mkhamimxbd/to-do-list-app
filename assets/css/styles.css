@@ -1,6 +1,7 @@
 /* color pallete: https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -57,7 +58,7 @@ main {
 .white-bg-for-pc {
   position: fixed;
   bottom: 0;
-  height: 60px;
+  height: 86px;
   width: 100vw;
   background-color: white;
   z-index: 100;
@@ -72,18 +73,22 @@ main {
 .todo-delete-btn {
   font-family: "roboto", Arial, Helvetica, sans-serif;
   font-size: 12px;
+}
+
+.todo-delete-btn {
   height: 30px;
 }
 
 .todo-input {
-  height: 32px;
+  height: 36px;
   width: 688px;
   font-size: 18px;
   margin: 0 4px 0 0;
+  padding: 1px 8px;
 }
 
 .todo-add-btn {
-  height: 35.6px;
+  height: 40px;
 }
 
 .todo-input::placeholder {

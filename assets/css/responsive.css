@@ -15,6 +15,7 @@
 
   .todo-input {
     width: 290px;
+    height: 32px;
     margin: 0;
     border: 1px solid black;
     border-right: none;
@@ -23,13 +24,14 @@
   }
 
   .todo-add-btn {
+    height: 35.6px;
     border-radius: 0 2px 2px 0;
     border: 1px solid black;
     border-left: 0.3px solid black;
     outline: none;
   }
 
-  .white-bg-for-pc{
+  .white-bg-for-pc {
     visibility: hidden;
   }
 }
@@ -41,5 +43,29 @@
 
   .todo-input {
     width: 460px;
+  }
+}
+
+@media (min-width: 750px) {
+  .todo-input-div {
+    position: fixed;
+  }
+
+  .todo-input {
+    border-radius: 12px 0 0 12px;
+    height: 36px;
+  }
+
+  .todo-add-btn {
+    border-radius: 0 12px 12px 0;
+    height: 40px;
+  }
+
+  .todo-list-div {
+    grid-template-columns: 550px 60px;
+  }
+
+  .white-bg-for-pc {
+    visibility: unset;
   }
 }
