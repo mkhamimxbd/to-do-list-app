@@ -10,7 +10,7 @@
   }
 
   .todo-list-div {
-    grid-template-columns: 360px;
+    grid-template-columns: 90vw;
   }
 
   .todo-input {
@@ -37,9 +37,6 @@
 }
 
 @media (min-width: 580px) {
-  .todo-list-div {
-    grid-template-columns: 520px;
-  }
 
   .todo-input {
     width: 460px;
@@ -61,11 +58,13 @@
     height: 40px;
   }
 
-  .todo-list-div {
-    grid-template-columns: 610px;
-  }
-
   .white-bg-for-pc {
     visibility: unset;
+  }
+}
+
+@media (min-width: 850px) {
+  .todo-list-div {
+    grid-template-columns: 700px;
   }
 }
