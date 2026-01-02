@@ -33,3 +33,13 @@
     visibility: hidden;
   }
 }
+
+@media (min-width: 580px) {
+  .todo-list-div {
+    grid-template-columns: 440px 80px;
+  }
+
+  .todo-input {
+    width: 460px;
+  }
+}
