@@ -43,7 +43,7 @@ function activateDeleteButton() {
       const { index } = btn.dataset;
       todoList.splice(index, 1);
       localStorage.setItem('todoList', JSON.stringify(todoList));
-      
+
 
       renderToDo();
       activateDeleteButton();
@@ -63,7 +63,3 @@ document.querySelector('.js-todo-input')
   .addEventListener('keydown', () => {
     addToDoOnEnter();
   });
-
-
-
-console.log(todoList);

@@ -1,0 +1,35 @@
+@media (min-width: 333px) {
+  .todo-main-div {
+    flex-direction: column;
+  }
+
+  .todo-input-div {
+    position: unset;
+    grid-template-columns: 1fr 70px;
+    margin: 0 0 20px 0;
+  }
+
+  .todo-list-div {
+    grid-template-columns: 274px 60px;
+  }
+
+  .todo-input {
+    width: 290px;
+    margin: 0;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+  }
+
+  .todo-add-btn {
+    border-radius: 0 2px 2px 0;
+    border: 1px solid black;
+    border-left: 0.3px solid black;
+    outline: none;
+  }
+
+  .white-bg-for-pc{
+    visibility: hidden;
+  }
+}

@@ -1,17 +1,71 @@
-.todo-list-div,
-.todo-input-div {
-  display: grid;
-  grid-template-columns: 300px 60px;
+/* color pallete: https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.app-header {
+  font-size: 34px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
+  margin: 15px 0;
+}
+
+.copyright-text {
+  font-size: 12px;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-main-div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
 }
 
+.todo-list-div,
 .todo-input-div {
-  margin: 0 0 10px 0;
+  display: grid;
+  align-items: center;
+}
+
+.todo-list-div {
+  grid-template-columns: 800px 60px;
+}
+
+.todo-input-div {
+  grid-template-columns: 1fr 60px;
+  position: fixed;
+  bottom: 26px;
+  z-index: 200;
+}
+
+.white-bg-for-pc {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
 }
 
 .todo-input,
 .todo {
-  font-family: "ibm plex mono", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .todo-add-btn,
@@ -22,9 +76,19 @@
 }
 
 .todo-input {
-  height: 26px;
-  width: 278px;
+  height: 32px;
+  width: 688px;
   font-size: 18px;
+  margin: 0 4px 0 0;
+}
+
+.todo-add-btn {
+  height: 35.6px;
+}
+
+.todo-input::placeholder {
+  font-size: 14px;
+  font-family: monospace;
 }
 
 .todo {
