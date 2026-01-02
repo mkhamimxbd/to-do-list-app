@@ -1,0 +1,5 @@
+.todo-done {
+  color: gray;
+  font-weight: 200;
+  text-decoration: line-through;
+}
