@@ -6,8 +6,10 @@ function renderToDo() {
   if (todoList) {
     todoList.forEach((todo, index) => {
       todoHTML += `
+        <div class="todo-container">
           <p class="todo">${todo}</p>
           <button class="todo-delete-btn js-todo-delete-btn" data-index="${index}">Delete</button>
+        </div>
         `;
     });
   }
