@@ -4,11 +4,11 @@ function renderToDo() {
   let todoHTML = '';
 
   if (todoList) {
-    todoList.forEach((todo, index) => {
+    todoList.forEach(todoObject => {
       todoHTML += `
         <div class="todo-container">
-          <p class="todo">${todo}</p>
-          <button class="todo-delete-btn js-todo-delete-btn" data-index="${index}">Delete</button>
+          <p class="todo">${todoObject.todo}</p>
+          <button class="todo-delete-btn js-todo-delete-btn" data-id="${todoObject.id}">Delete</button>
         </div>
         `;
     });
@@ -20,17 +20,22 @@ function renderToDo() {
 
 function addToDo() {
   const todoInput = document.querySelector('.js-todo-input');
+  const id = crypto.randomUUID();
 
   if (todoInput.value) {
-    todoList.push(todoInput.value);
+    todoList.push(
+      {
+        id,
+        todo: todoInput.value,
+        done: false
+      }
+    );
     localStorage.setItem('todoList', JSON.stringify(todoList));
 
     renderToDo();
 
     todoInput.value = '';
   }
-
-  activateDeleteButton();
 }
 
 function addToDoOnEnter() {
@@ -39,22 +44,7 @@ function addToDoOnEnter() {
   }
 }
 
-function activateDeleteButton() {
-  document.querySelectorAll('.js-todo-delete-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const { index } = btn.dataset;
-      todoList.splice(index, 1);
-      localStorage.setItem('todoList', JSON.stringify(todoList));
-
-
-      renderToDo();
-      activateDeleteButton();
-    });
-  });
-}
-
 renderToDo();
-activateDeleteButton();
 
 document.querySelector('.js-todo-add-btn')
   .addEventListener('click', () => {
@@ -66,10 +56,10 @@ document.querySelector('.js-todo-input')
     addToDoOnEnter();
   });
 
-document.querySelectorAll('.todo-container')
- .forEach(todo => {
-  todo.addEventListener('click', () => {
-    todo.classList.add('todo-done');
-    console.log('clicked')
-  });
- });
+// document.querySelectorAll('.todo-container')
+//   .forEach(todo => {
+//     todo.addEventListener('click', () => {
+//       todo.classList.add('todo-done');
+//       console.log('clicked')
+//     });
+//   });
