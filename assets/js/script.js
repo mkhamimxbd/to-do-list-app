@@ -6,9 +6,8 @@ function renderToDo() {
   if (todoList) {
     todoList.forEach(todoObject => {
       todoHTML += `
-        <div class="todo-container">
-          <p class="todo">${todoObject.todo}</p>
-          <button class="todo-delete-btn js-todo-delete-btn" data-id="${todoObject.id}">Delete</button>
+        <div class="todo-container js-todo-container" data-id="${todoObject.id}" data-done="${todoObject.done}">
+          <p class="todo" data-id="${todoObject.id}">${todoObject.todo}</p>
         </div>
         `;
     });
@@ -44,6 +43,18 @@ function addToDoOnEnter() {
   }
 }
 
+function doneTodo(id) {
+  let matchingTodo;
+  
+  todoList.forEach(todoObject => {
+    if (id === todoObject.id) {
+      matchingTodo = todoObject;
+    }
+  });
+  matchingTodo.done = true;
+  console.log(matchingTodo)
+}
+
 renderToDo();
 
 document.querySelector('.js-todo-add-btn')
@@ -56,10 +67,13 @@ document.querySelector('.js-todo-input')
     addToDoOnEnter();
   });
 
-// document.querySelectorAll('.todo-container')
-//   .forEach(todo => {
-//     todo.addEventListener('click', () => {
-//       todo.classList.add('todo-done');
-//       console.log('clicked')
-//     });
-//   });
+document.querySelectorAll('.js-todo-container')
+  .forEach(todo => {
+    todo.addEventListener('click', () => {
+      doneTodo(todo.dataset.id);
+
+      if (todo.dataset.done === true) {
+        todo.classList.add('todo-done');
+      }
+    });
+  });
